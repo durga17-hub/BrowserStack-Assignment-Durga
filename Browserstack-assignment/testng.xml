@@ -1,0 +1,67 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Parallel Tests" parallel="tests" thread-count="5">
+    <test name="Desktop Chrome">
+    <parameter name="os" value="Windows"/>
+    <parameter name="osVersion" value="10"/>
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="browserVersion" value="latest"/>
+    <parameter name="device" value=""/>
+    <parameter name="realMobile" value="false"/>
+        <classes>
+            <class name="test.BrowserStackTest"/>
+        </classes>
+    </test>
+
+
+    <test name="Desktop Firefox">
+	<parameter name="os" value="Windows"/>
+    <parameter name="osVersion" value="10"/>
+    <parameter name="browser" value="Firefox"/>
+    <parameter name="browserVersion" value="latest"/>
+    <parameter name="device" value=""/>
+    <parameter name="realMobile" value="false"/>
+        <classes>
+            <class name="test.BrowserStackTest"/>
+        </classes>
+    </test>
+
+
+    <test name="Mobile Safari">
+	<parameter name="os" value="iOS"/>
+    <parameter name="osVersion" value="15.0"/>
+    <parameter name="browser" value=""/>
+    <parameter name="browserVersion" value=""/>
+    <parameter name="device" value="iPhone 13"/>
+    <parameter name="realMobile" value="true"/>
+        <classes>
+            <class name="test.BrowserStackTest"/>
+        </classes>
+    </test>
+
+
+    <test name="Mobile Chrome">
+	<parameter name="os" value="Android"/>
+    <parameter name="osVersion" value="12.0"/>
+    <parameter name="browser" value=""/>
+    <parameter name="browserVersion" value=""/>
+    <parameter name="device" value="Samsung Galaxy S22"/>
+    <parameter name="realMobile" value="true"/>
+        <classes>
+            <class name="test.BrowserStackTest"/>
+        </classes>
+    </test>
+
+
+    <test name="Desktop Edge">
+	<parameter name="os" value="Windows"/>
+    <parameter name="osVersion" value="10"/>
+    <parameter name="browser" value="Edge"/>
+    <parameter name="browserVersion" value="latest"/>
+    <parameter name="device" value=""/>
+    <parameter name="realMobile" value="false"/>
+        <classes>
+            <class name="test.BrowserStackTest"/>
+        </classes>
+    </test>
+</suite>
